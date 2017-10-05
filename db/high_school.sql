@@ -8,12 +8,30 @@ CREATE TABLE students (
 
 
 CREATE TABLE subjects (
-  ID SERIAL4 PRIMARY KEY,
+  id SERIAL4 PRIMARY KEY,
   name VARCHAR(255),
   teacher VARCHAR(255)
 );
 
 
+CREATE TABLE student_subjects (
+  id SERIAL4 PRIMARY KEY,
+  student_id INT4 REFERENCES students(id) ON DELETE CASCADE,
+  subject_id INT4 REFERENCES subjects(id) ON DELETE CASCADE
+);
+
+
+
+
+
+-- CREATE TABLE visits (
+--   id SERIAL4 PRIMARY KEY,
+--   user_id INT4 REFERENCES users(id) ON DELETE CASCADE,
+--   location_id INT4 REFERENCES locations(id) ON DELETE CASCADE,
+--   review TEXT
+--
+--
+-- );
 
 --
 -- Tasks
