@@ -1,5 +1,5 @@
 require('pg')
-
+# above requires in postgreSQL to utilize the PG class below
 class SqlRunner
 
   def self.run( sql, values )
