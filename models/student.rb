@@ -32,7 +32,7 @@ def save()
   RETURNING id"
   values = [@name]
   student = SqlRunner.run( sql, values).first
-  @ID = student['id'].to_i
+  @id = student['id'].to_i
 
 end
 
